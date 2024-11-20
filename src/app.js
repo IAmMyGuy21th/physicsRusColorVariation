@@ -132,7 +132,7 @@ App = function() {
 	var demoArr = [DemoCircles, DemoCar, DemoRagDoll, DemoSeeSaw, DemoPyramid, DemoCrank, DemoRope, DemoWeb, DemoBounce];
 	var sceneNameArr = [];
 	var sceneIndex;	
-	var randomColor = ["#E00", "#F60", "#FC0", "#FF6", "#9F3", "#3C3", "#6FC", "#3CF", "#06F", "#90C", "#939", "#936"]; // Random colors for drawing bodies
+	var randomColor = ["#f55a3c", "#f19648", "#f5d259", "#ececd1", "#063e7b"] //["#E00", "#F60", "#FC0", "#FF6", "#9F3", "#3C3", "#6FC", "#3CF", "#06F", "#90C", "#939", "#936"]; // Random colors for drawing bodies
 	var mouseBody;
 	var mouseJoint;
 	var creatingBody;
@@ -155,10 +155,10 @@ App = function() {
 	var scaledGridSize;
 	var snapCenterOffset = new vec2;
 	var snapOffset = new vec2;
-	var backgroundColor = "rgb(0, 0, 0)";
+	var backgroundColor = "rgba(20,21,31)";
 	//var backgroundColor = "rgb(95, 105, 118)";
-	var gridFrameColor = "#E6E6E6";
-	var gridColor = "#B3B3B3";
+	var gridFrameColor = "#4c4c62";
+	var gridColor = "#2c2c32";
 	var selectionColor = "rgba(255, 160, 0, 1.0)";
 	var highlightColor = "rgba(255, 245, 235, 1.0)";	
 	var vertexColor = "#EEE";
@@ -2557,7 +2557,7 @@ App = function() {
 				for (var i = 0; i < space.bodyArr.length; i++) {
 					var body = space.bodyArr[i];
 					if (body && body.isStatic()) {
-						drawBody(bg.ctx, body, PIXEL_UNIT, "#FFF", "#000");
+						drawBody(bg.ctx, body, PIXEL_UNIT, "#2c2c32", "#14151f");
 					}
 				}
 			}
@@ -2604,7 +2604,7 @@ App = function() {
 			var body = space.bodyArr[i];
 			if (body && body.visible) {
 				if ((editorEnabled) || (!editorEnabled && !body.isStatic())) {				
-					drawBody(fg.ctx, body, PIXEL_UNIT, body.isStatic() ? "#FFF" : "#0008", body.isStatic() ? "#000" : bodyColor(body));					
+					drawBody(fg.ctx, body, PIXEL_UNIT, body.isStatic() ? "#2c2c32" : "#0008", body.isStatic() ? "#14151f" : bodyColor(body));					
 				}
 			}
 		}
