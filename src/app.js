@@ -2604,7 +2604,7 @@ App = function() {
 			var body = space.bodyArr[i];
 			if (body && body.visible) {
 				if ((editorEnabled) || (!editorEnabled && !body.isStatic())) {				
-					drawBody(fg.ctx, body, PIXEL_UNIT, body.isStatic() ? "#2c2c32" : "#0008", body.isStatic() ? "#14151f" : bodyColor(body));					
+					drawBody(fg.ctx, body, PIXEL_UNIT, body.isStatic() ? "#2c2c32" : (document.getElementById("border").checked ? "#0008" : "#0000"), body.isStatic() ? "#14151f" : bodyColor(body));					
 				}
 			}
 		}
